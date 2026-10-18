@@ -72,7 +72,7 @@ pip install comtypes pdfCropMargins pyinstaller
 3. 压缩exe文件（可选）：根据 [配置upx链接](https://blog.csdn.net/JiuShu110/article/details/132625538) 下载 [UPX](https://upx.github.io) ，将解压后得到的`upx.exe`拷贝到项目主目录，然后运行第 4 步的打包命令。
 4. 编译打包
 ```cmd
-pyinstaller -F -w -n powerpoint2pdf --optimize=2 powerpoint2pdf/main.py  # 生成的发布文件为`dist/ppt2pdf.exe`
+pyinstaller -F -w -n powerpoint2pdf --optimize=2 powerpoint2pdf/main.py  # 生成的发布文件为`dist/powerpoint2pdf.exe`
 ```
 
 
@@ -84,7 +84,7 @@ python setup.py sdist bdist_wheel
 ```
 2. 上传：
 ```shell
-# 删除文件 dist/ppt2pdf.exe
+# 删除文件 dist/powerpoint2pdf.exe
 pip install twine
 twine upload dist/*  # 需要使用PyPi的Token
 ```
