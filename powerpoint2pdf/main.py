@@ -7,11 +7,11 @@ from tkinter.filedialog import asksaveasfilename
 
 def ppt_2_pdf(input_ppt_file, page_index, output_pdf_file):
     """
-    Convert a Powerpoint file to a pdf file
-    :param input_ppt_file: input Powerpoint file
-    :param output_pdf_file: output pdf file
-    :param format_type:
-    :return: a pdf file written in the directory
+    将指定 PowerPoint 文件中的指定幻灯片导出为 PDF。
+    :param input_ppt_file: PowerPoint 源文件路径。
+    :param output_pdf_file: 导出 PDF 的目标路径。
+    :param page_index: 要导出的幻灯片页码。
+    :return: 无返回值（None）；导出的 PDF 写入 output_pdf_file。
     """
     powerpoint = comtypes.client.CreateObject("Powerpoint.Application")
     powerpoint.Visible = 1
@@ -26,9 +26,9 @@ def ppt_2_pdf(input_ppt_file, page_index, output_pdf_file):
     
 def current_slide_2_pdf(output_pdf_file):
     """
-    Convert a Powerpoint file to a pdf file
-    :param output_pdf_file: output pdf file
-    :return: a pdf file written in the directory
+    将当前活动的 PowerPoint 演示文稿导出为 PDF。
+    :param output_pdf_file: 导出 PDF 的目标路径。
+    :return: 成功时返回 True；发生异常时显示错误提示并返回 False。
     """
     try:
         powerpoint = comtypes.client.CreateObject("Powerpoint.Application")
